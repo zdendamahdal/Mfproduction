@@ -1,0 +1,1086 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ========================================
+   RESET & ZÁKLAD
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-primary: #030d1c;
+  --bg-secondary: #071630;
+  --bg-darker: #020914;
+  --bg-card: #0c1f3d;
+  --blue: #0b5ed7;
+  --blue-light: #2f80f0;
+  --blue-dark: #073b8f;
+  --white: #ffffff;
+  --text-gray: #a6b0c3;
+  --text-gray-dim: #6f7c93;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --header-height: 88px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-primary);
+  color: var(--white);
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--blue-light);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ========================================
+   TLAČÍTKA
+   ======================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 30px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background: var(--blue-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(11, 94, 215, 0.35);
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.btn-outline:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ========================================
+   NADPIS SEKCE (centrovaný, s podtržením)
+   ======================================== */
+.section-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-heading h2 {
+  display: inline-block;
+  font-size: clamp(24px, 3vw, 32px);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.section-heading h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--blue);
+}
+
+/* ========================================
+   HLAVIČKA
+   ======================================== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--header-height);
+  display: flex;
+  align-items: center;
+  background: rgba(3, 13, 28, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.header-inner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-decoration: none;
+}
+
+.logo-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--blue-light), var(--blue-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logo-icon svg {
+  width: 17px;
+  height: 17px;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.logo-title {
+  font-size: 19px;
+  font-weight: 800;
+  color: var(--white);
+  letter-spacing: 0.5px;
+}
+
+.logo-subtitle {
+  font-size: 9.5px;
+  font-weight: 600;
+  color: var(--text-gray-dim);
+  letter-spacing: 2px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 34px;
+}
+
+.main-nav a {
+  position: relative;
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.78);
+  text-decoration: none;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-bottom: 8px;
+  transition: color 0.25s ease;
+}
+
+.main-nav a:hover {
+  color: var(--white);
+}
+
+.main-nav a.active {
+  color: var(--white);
+}
+
+.main-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--blue);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.header-cta {
+  padding: 11px 24px;
+  font-size: 12px;
+}
+
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  width: 100%;
+  height: 2px;
+  background: var(--white);
+  transition: all 0.3s ease;
+}
+
+.nav-toggle.is-active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.is-active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ========================================
+   HERO
+   ======================================== */
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--header-height);
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: right center;
+  opacity: 0.6;
+}
+
+.hero-gradient {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--bg-primary) 0%, var(--bg-primary) 28%, rgba(3, 13, 28, 0.72) 55%, rgba(3, 13, 28, 0.15) 100%);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 620px;
+}
+
+.hero h1 {
+  font-size: clamp(2.6rem, 5.5vw, 4.4rem);
+  font-weight: 900;
+  line-height: 1.06;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: var(--white);
+}
+
+.hero-subtitle {
+  margin-top: 26px;
+  font-size: 17px;
+  line-height: 1.65;
+  color: var(--text-gray);
+  max-width: 440px;
+}
+
+.hero-categories {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin: 30px 0 42px;
+}
+
+.hero-categories li {
+  position: relative;
+  padding-right: 18px;
+  margin-right: 18px;
+}
+
+.hero-categories li:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  right: -2px;
+  top: 0;
+  color: rgba(255, 255, 255, 0.22);
+}
+
+.hero-categories a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+.hero-categories a:hover {
+  color: var(--blue-light);
+}
+
+/* ========================================
+   SLUŽBY
+   ======================================== */
+.services {
+  padding: 90px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px 40px;
+}
+
+.service-icon {
+  width: 56px;
+  height: 56px;
+  border: 1.5px solid var(--blue);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--blue-light);
+  margin-bottom: 26px;
+}
+
+.service-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.service-card h3 {
+  font-size: 15.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.service-card p {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--text-gray);
+  margin-bottom: 22px;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--blue-light);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: gap 0.25s ease;
+}
+
+.link-arrow svg {
+  width: 13px;
+  height: 13px;
+  transition: transform 0.25s ease;
+}
+
+.link-arrow:hover {
+  gap: 12px;
+}
+
+/* ========================================
+   NAŠE PRÁCE / PORTFOLIO
+   ======================================== */
+.portfolio {
+  padding: 100px 0;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+}
+
+.portfolio-item {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(3, 13, 28, 0.92) 100%);
+  transition: background 0.3s ease;
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.08);
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  background: linear-gradient(180deg, rgba(11, 94, 215, 0.35), rgba(3, 13, 28, 0.88));
+}
+
+.portfolio-label {
+  position: absolute;
+  left: 18px;
+  bottom: 20px;
+  z-index: 1;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.portfolio-play {
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  border: 1.5px solid var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  transition: all 0.25s ease;
+}
+
+.portfolio-play svg {
+  width: 12px;
+  height: 12px;
+}
+
+.portfolio-item:hover .portfolio-play {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.portfolio-more {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* ========================================
+   PROČ SPOLUPRACOVAT S NÁMI
+   ======================================== */
+.why-us {
+  padding: 100px 0;
+}
+
+.why-us-grid {
+  display: grid;
+  grid-template-columns: 0.85fr 1.3fr 0.95fr;
+  gap: 46px;
+  align-items: stretch;
+}
+
+.why-image {
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.why-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 420px;
+  object-fit: cover;
+}
+
+.why-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.why-content h2 {
+  font-size: clamp(22px, 2.4vw, 28px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 28px;
+}
+
+.checklist {
+  margin-bottom: 32px;
+}
+
+.checklist li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #dbe0ea;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.checklist svg {
+  flex-shrink: 0;
+  width: 21px;
+  height: 21px;
+  color: var(--blue-light);
+}
+
+.why-quote {
+  background: var(--bg-card);
+  border-radius: 8px;
+  padding: 34px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.quote-mark {
+  width: 34px;
+  height: auto;
+  color: var(--blue);
+  margin-bottom: 14px;
+}
+
+.why-quote p {
+  color: #dbe0ea;
+  font-size: 14.5px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.quote-author {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.quote-author strong {
+  color: var(--white);
+  font-weight: 600;
+}
+
+.quote-author span {
+  color: var(--text-gray-dim);
+}
+
+/* ========================================
+   MÁTE PROJEKT? (CTA)
+   ======================================== */
+.cta {
+  position: relative;
+  padding: 110px 0;
+  overflow: hidden;
+}
+
+.cta-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.cta-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(3, 13, 28, 0.95) 0%, rgba(3, 13, 28, 0.78) 42%, rgba(3, 13, 28, 0.3) 100%);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+  max-width: 560px;
+}
+
+.cta-content h2 {
+  font-size: clamp(24px, 3vw, 30px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 14px;
+}
+
+.cta-content p {
+  color: var(--text-gray);
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+/* ========================================
+   PATIČKA
+   ======================================== */
+.site-footer {
+  padding: 40px 0;
+  background: var(--bg-darker);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.footer-contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-gray);
+  font-size: 13.5px;
+}
+
+.footer-contact svg {
+  width: 16px;
+  height: 16px;
+  color: var(--blue-light);
+  flex-shrink: 0;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-social a {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.footer-social svg {
+  width: 15px;
+  height: 15px;
+}
+
+.footer-social a:hover {
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+/* ========================================
+   BANNER PRO PODSTRÁNKY (např. O nás)
+   ======================================== */
+.page-header {
+  padding: calc(var(--header-height) + 70px) 0 70px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  text-align: center;
+}
+
+.page-header h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.page-header p {
+  color: var(--text-gray);
+  font-size: 16px;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   PŘÍBĚH FIRMY (text + obrázek střídavě)
+   ======================================== */
+.story {
+  padding: 100px 0;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.story-grid + .story-grid {
+  margin-top: 90px;
+}
+
+.story-grid.reverse {
+  direction: rtl;
+}
+
+.story-grid.reverse > * {
+  direction: ltr;
+}
+
+.story-image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.story-text h2 {
+  font-size: clamp(20px, 2.2vw, 26px);
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.3;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+
+.story-text p {
+  color: var(--text-gray);
+  font-size: 15.5px;
+  line-height: 1.75;
+  margin-bottom: 16px;
+}
+
+.story-highlight {
+  margin-top: 22px;
+  padding: 20px 24px;
+  background: var(--bg-card);
+  border-left: 3px solid var(--blue);
+  border-radius: 4px;
+  color: #dbe0ea;
+  font-size: 14.5px;
+  line-height: 1.7;
+}
+
+/* ========================================
+   ČASOVÁ OSA
+   ======================================== */
+.timeline-section {
+  padding: 100px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 60px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: var(--border-subtle);
+}
+
+.timeline-item {
+  position: relative;
+  padding-top: 50px;
+  text-align: center;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--blue);
+  box-shadow: 0 0 0 4px var(--bg-secondary), 0 0 0 5px var(--border-subtle);
+}
+
+.timeline-year {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--blue-light);
+  margin-bottom: 10px;
+}
+
+.timeline-item p {
+  color: var(--text-gray);
+  font-size: 14px;
+  line-height: 1.6;
+  max-width: 260px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   SPECIALIZACE (tagy)
+   ======================================== */
+.specializations {
+  padding: 100px 0;
+  text-align: center;
+}
+
+.spec-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.spec-tag {
+  padding: 12px 22px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 30px;
+  color: #dbe0ea;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+
+.spec-tag:hover {
+  border-color: var(--blue);
+  color: var(--white);
+  background: rgba(11, 94, 215, 0.08);
+}
+
+/* ========================================
+   JEDNODUCHÉ CTA (bez pozadí obrázkem)
+   ======================================== */
+.cta-simple {
+  padding: 90px 0;
+  text-align: center;
+}
+
+.cta-simple h2 {
+  font-size: clamp(22px, 2.6vw, 28px);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--white);
+  margin-bottom: 16px;
+}
+
+.cta-simple p {
+  color: var(--text-gray);
+  font-size: 15.5px;
+  margin-bottom: 28px;
+}
+
+/* ========================================
+   RESPONZIVITA
+   ======================================== */
+@media (max-width: 1100px) {
+  .container {
+    padding: 0 36px;
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr 1.2fr;
+  }
+
+  .why-quote {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 968px) {
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--bg-primary);
+    border-bottom: 1px solid var(--border-subtle);
+    transform: translateY(-130%);
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 10px 0 26px;
+  }
+
+  .main-nav.is-open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 22px;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 44px 30px;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    padding: 0 22px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-image img {
+    min-height: 280px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-contact {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+}
+
+/* ========================================
+   RESPONZIVITA - PODSTRÁNKY (O nás apod.)
+   ======================================== */
+@media (max-width: 700px) {
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .story-grid.reverse {
+    direction: ltr;
+  }
+
+  .story-grid + .story-grid {
+    margin-top: 60px;
+  }
+
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 46px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+}
