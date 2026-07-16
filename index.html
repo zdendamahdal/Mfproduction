@@ -62,6 +62,9 @@
           <p class="hero-subtitle"></p>
         </div>
       </div>
+      <a href="#klienti" class="scroll-down" aria-label="Posunout dolů">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+      </a>
     </section>
 
     <!-- ========================================
@@ -117,7 +120,7 @@
     <!-- ========================================
          PRO KOHO JSME TOČILI
          ======================================== -->
-    <section class="clients">
+    <section class="clients" id="klienti">
       <div class="container">
         <div class="section-heading">
           <h2>Pro koho jsme točili</h2>
@@ -229,7 +232,7 @@
       </div>
       <div class="container">
         <div class="cta-content">
-          <h2>Máte projekt? Rádi vám pomůžeme.</h2>
+          <h2>Máte projekt?</h2>
           <p>Ozvěte se nám a my vám pomůžeme.</p>
           <ul class="cta-contact-list">
             <li>
@@ -317,6 +320,44 @@
         var isExpanded = storyMore.classList.toggle('is-expanded');
         storyToggle.setAttribute('aria-expanded', isExpanded);
         storyToggleLabel.textContent = isExpanded ? 'Zobrazit méně' : 'Zobrazit více';
+      });
+    }
+
+    var scrollDown = document.querySelector('.scroll-down');
+
+    if (scrollDown) {
+      scrollDown.addEventListener('click', function (e) {
+        var target = document.querySelector(scrollDown.getAttribute('href'));
+        if (!target) return;
+        e.preventDefault();
+
+        var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        var headerHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height'), 10) || 88;
+        var startY = window.pageYOffset;
+        var targetY = target.getBoundingClientRect().top + startY - headerHeight;
+
+        if (prefersReducedMotion) {
+          window.scrollTo(0, targetY);
+          return;
+        }
+
+        var duration = 1000;
+        var startTime = null;
+
+        function easeInOutQuad(t) {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        }
+
+        function step(timestamp) {
+          if (startTime === null) startTime = timestamp;
+          var progress = Math.min((timestamp - startTime) / duration, 1);
+          window.scrollTo(0, startY + (targetY - startY) * easeInOutQuad(progress));
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          }
+        }
+
+        requestAnimationFrame(step);
       });
     }
   </script>
