@@ -4,10 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="MFproduction – profesionální videoprodukce, zpravodajství, dokumenty, a firemní videa.">
-<title>MFproduction</title>
+<title>MFproduction – videoprodukce, reportáže a firemní videa | Bánov</title>
+<link rel="canonical" href="https://www.mfproduction.cz/">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@300&display=swap">
+
 <link rel="stylesheet" href="style.css">
+
 
 </head>
 <body>
@@ -19,7 +25,7 @@
     <div class="container header-inner">
       <a href="#" class="logo">
         <span class="logo-icon">
-          <img src="MF.webp" alt="">
+          <img src="MF.webp" alt="" width="1536" height="1024">
         </span>
         <span class="logo-text">
           <span class="logo-title">MFproduction </span>
@@ -32,7 +38,7 @@
           <li><a href="#" class="active">Domů</a></li>
           <li><a href="#sluzby">Služby</a></li>
           <li><a href="#o-nas">O nás</a></li>
-          <li><a href="#kontakt" class="contact">Kontakt</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
         </ul>
       </nav>
 
@@ -51,17 +57,17 @@
          ======================================== -->
     <section class="hero">
       <div class="hero-bg">
-        <img src="camera.png" alt="kamera">
+        <img src="camera.webp" alt="" width="1774" height="887" fetchpriority="high">
         <div class="hero-gradient"></div>
 
       </div>
       <div class="container">
         <div class="hero-content">
-          <h1>video produkce<br></h1>
-          <p class="hero-subtitle"></p>
+          <h1>Video produkce</h1>
+          <p class="hero-subtitle">Petr Mahdal</p>
         </div>
       </div>
-      <a href="#klienti" class="scroll-down scroll-down--hero" aria-label="Posunout dolů">
+      <a href="#sluzby" class="scroll-down scroll-down--hero" aria-label="Posunout dolů">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
       </a>
     </section>
@@ -70,30 +76,29 @@
          SLUŽBY
          ======================================== -->
     <section class="services" id="sluzby">
-      <div class="container services-grid">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Služby</h2>
+        </div>
+      </div>
+      <div class="container services-grid" id="servicesGrid">
 
         <div class="service-card">
           <h3>Zpravodajství</h3>
-          <p>Rychlé, přesné a objektivní zpravodajství z aktuálních událostí.</p>
-          <span class="service-card-hint">klikni pro zobrazit více..</span>
-        </div>
+          <p>Rychlé, přesné a objektivní zpravodajství z aktuálních událostí.</p>        </div>
 
         <div class="service-card">
           <h3>Dokumenty</h3>
-          <p>Tvoříme dokumentární pořady na míru.</p>
-          <span class="service-card-hint">klikni pro zobrazit více..</span>
-        </div>
+          <p>Tvoříme dokumentární pořady na míru.</p>        </div>
 
         <div class="service-card service-card--extra">
           <h3>Dron</h3>
-          <p>Ke tvorbě používáme i dron.</p>
-          <span class="service-card-hint">klikni pro zobrazit více..</span>
-        </div>
+          <p>Ke tvorbě používáme i dron.</p>        </div>
 
       </div>
 
       <div class="container services-more">
-        <button type="button" class="services-toggle" id="servicesToggle" aria-expanded="false">
+        <button type="button" class="services-toggle" id="servicesToggle" aria-expanded="false" aria-controls="servicesGrid">
           <span class="services-toggle-label">Zobrazit více</span>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
         </button>
@@ -115,113 +120,107 @@
         <div class="clients-scroll">
           <div class="clients-track">
             <div class="client-logo">
-              <img src="Noe-logo-2016.png" alt="TV Noe">
+              <img src="loga/Noe-logo-2016.webp" alt="TV Noe" loading="lazy" decoding="async" width="266" height="280">
             </div>
             <div class="client-logo">
-              <img src="prestar-logo.jpeg" alt="Prestar Company">
+              <img src="loga/prestar-logo.jpeg" alt="Prestar Company" loading="lazy" decoding="async" width="200" height="200">
             </div>
             <div class="client-logo">
-              <img src="signum-logo.jpeg" alt="Signum">
+              <img src="loga/signum-logo.jpeg" alt="Signum" loading="lazy" decoding="async" width="200" height="200">
             </div>
             <div class="client-logo">
-              <img src="husqvarna-logo.jpeg" alt="Husqvarna">
+              <img src="loga/husqvarna-logo.jpeg" alt="Husqvarna" loading="lazy" decoding="async" width="1000" height="1000">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_5_logo-2.webp" alt="Timken">
+              <img src="loga/imgi_5_logo-2.webp" alt="Timken" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_6_logo-3.webp" alt="Steeltec.cz">
+              <img src="loga/imgi_6_logo-3.webp" alt="Steeltec.cz" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_7_logo-4.webp" alt="Zálesí Luhačovice">
+              <img src="loga/imgi_7_logo-4.webp" alt="Zálesí Luhačovice" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_8_logo-5.webp" alt="Reality Hotels SK">
+              <img src="loga/imgi_8_logo-5.webp" alt="Reality Hotels SK" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_9_logo-6.webp" alt="AC Steel">
+              <img src="loga/imgi_9_logo-6.webp" alt="AC Steel" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_10_logo-7.webp" alt="Chropyňská strojírna">
+              <img src="loga/imgi_10_logo-7.webp" alt="Chropyňská strojírna" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_11_logo-8.webp" alt="FIMES">
+              <img src="loga/imgi_11_logo-8.webp" alt="FIMES" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_12_logo-9.webp" alt="Klient">
+              <img src="loga/imgi_14_logo-11.webp" alt="Zeveta Bojkovice" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_14_logo-11.webp" alt="Zeveta Bojkovice">
+              <img src="loga/imgi_16_logo-15.webp" alt="RM Gastro" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_16_logo-15.webp" alt="RM Gastro">
+              <img src="loga/imgi_17_logo-17.webp" alt="KINX" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_17_logo-17.webp" alt="KINX">
+              <img src="loga/imgi_18_logo-18.webp" alt="Joga" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_18_logo-18.webp" alt="Joga">
+              <img src="loga/imgi_19_logo-19.webp" alt="Form" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/imgi_19_logo-19.webp" alt="Form">
-            </div>
-            <div class="client-logo">
-              <img src="loga/imgi_21_logo-21.webp" alt="Česká zbrojovka">
+              <img src="loga/imgi_21_logo-21.webp" alt="Česká zbrojovka" loading="lazy" decoding="async" width="215" height="130">
             </div>
 
             <div class="client-logo" aria-hidden="true">
-              <img src="Noe-logo-2016.png" alt="">
+              <img src="loga/Noe-logo-2016.webp" alt="" loading="lazy" decoding="async" width="266" height="280">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="prestar-logo.jpeg" alt="">
+              <img src="loga/prestar-logo.jpeg" alt="" loading="lazy" decoding="async" width="200" height="200">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="signum-logo.jpeg" alt="">
+              <img src="loga/signum-logo.jpeg" alt="" loading="lazy" decoding="async" width="200" height="200">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="husqvarna-logo.jpeg" alt="">
+              <img src="loga/husqvarna-logo.jpeg" alt="" loading="lazy" decoding="async" width="1000" height="1000">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_5_logo-2.webp" alt="">
+              <img src="loga/imgi_5_logo-2.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_6_logo-3.webp" alt="">
+              <img src="loga/imgi_6_logo-3.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_7_logo-4.webp" alt="">
+              <img src="loga/imgi_7_logo-4.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_8_logo-5.webp" alt="">
+              <img src="loga/imgi_8_logo-5.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_9_logo-6.webp" alt="">
+              <img src="loga/imgi_9_logo-6.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_10_logo-7.webp" alt="">
+              <img src="loga/imgi_10_logo-7.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_11_logo-8.webp" alt="">
+              <img src="loga/imgi_11_logo-8.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_12_logo-9.webp" alt="">
+              <img src="loga/imgi_14_logo-11.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_14_logo-11.webp" alt="">
+              <img src="loga/imgi_16_logo-15.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_16_logo-15.webp" alt="">
+              <img src="loga/imgi_17_logo-17.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_17_logo-17.webp" alt="">
+              <img src="loga/imgi_18_logo-18.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_18_logo-18.webp" alt="">
+              <img src="loga/imgi_19_logo-19.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_19_logo-19.webp" alt="">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_21_logo-21.webp" alt="">
+              <img src="loga/imgi_21_logo-21.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
           </div>
         </div>
@@ -252,7 +251,7 @@
             </li>
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" stroke-width="1.3" opacity="0.4"/><path d="M7.5 12.5l3 3 6-6.5" stroke-width="2"/></svg>
-              vše vymyslíme, natočíme a sestříháme
+              Vše vymyslíme, natočíme a sestříháme
             </li>
           </ul>
         </div>
@@ -286,13 +285,13 @@
          ======================================== -->
     <section class="cta" id="kontakt">
       <div class="cta-bg">
-        <img src="dron.jpg" alt="">
+        <img src="DronCHATGPT.webp" alt="" loading="lazy" width="1672" height="941">
         <div class="cta-overlay"></div>
       </div>
       <div class="container">
         <div class="cta-content">
-          <h2>Napište nám.  </h2>
-          <p>my vám pomůžeme.</p>
+          <h2>Napište nám.</h2>
+          <p>My vám pomůžeme.</p>
           <ul class="cta-contact-list">
             <li>
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 6.5l9 6 9-6"/></svg>
@@ -314,7 +313,7 @@
     <div class="container footer-inner">
       <a href="#" class="logo">
         <span class="logo-icon">
-          <img src="MF.webp" alt="">
+          <img src="MF.webp" alt="" width="1536" height="1024">
         </span>
         <span class="logo-text">
           <span class="logo-title">MFproduction</span>
@@ -362,7 +361,7 @@
     var servicesGrid = document.querySelector('.services-grid');
     var servicesToggleLabel = servicesToggle ? servicesToggle.querySelector('.services-toggle-label') : null;
 
-    if (servicesToggle && servicesGrid) {
+    if (servicesToggle && servicesGrid && servicesToggleLabel) {
       servicesToggle.addEventListener('click', function () {
         var isExpanded = servicesGrid.classList.toggle('is-expanded');
         servicesToggle.setAttribute('aria-expanded', isExpanded);
@@ -374,7 +373,7 @@
     var storyMore = document.getElementById('storyMore');
     var storyToggleLabel = storyToggle ? storyToggle.querySelector('.story-toggle-label') : null;
 
-    if (storyToggle && storyMore) {
+    if (storyToggle && storyMore && storyToggleLabel) {
       storyToggle.addEventListener('click', function () {
         var isExpanded = storyMore.classList.toggle('is-expanded');
         storyToggle.setAttribute('aria-expanded', isExpanded);
@@ -382,9 +381,15 @@
       });
     }
 
-    var scrollDown = document.querySelector('.scroll-down');
+    function jumpTo(y) {
+      var html = document.documentElement;
+      var prev = html.style.scrollBehavior;
+      html.style.scrollBehavior = 'auto';
+      window.scrollTo(0, y);
+      html.style.scrollBehavior = prev;
+    }
 
-    if (scrollDown) {
+    document.querySelectorAll('.scroll-down').forEach(function (scrollDown) {
       scrollDown.addEventListener('click', function (e) {
         var target = document.querySelector(scrollDown.getAttribute('href'));
         if (!target) return;
@@ -396,7 +401,7 @@
         var targetY = target.getBoundingClientRect().top + startY - headerHeight;
 
         if (prefersReducedMotion) {
-          window.scrollTo({ top: targetY, left: 0, behavior: 'instant' });
+          jumpTo(targetY);
           return;
         }
 
@@ -410,7 +415,7 @@
         function step(timestamp) {
           if (startTime === null) startTime = timestamp;
           var progress = Math.min((timestamp - startTime) / duration, 1);
-          window.scrollTo({ top: startY + (targetY - startY) * easeInOutQuad(progress), left: 0, behavior: 'instant' });
+          jumpTo(startY + (targetY - startY) * easeInOutQuad(progress));
           if (progress < 1) {
             requestAnimationFrame(step);
           }
@@ -418,6 +423,15 @@
 
         requestAnimationFrame(step);
       });
+    });
+
+    var clientsSection = document.querySelector('.clients');
+    if (clientsSection && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          clientsSection.classList.toggle('is-paused', !entry.isIntersecting);
+        });
+      }).observe(clientsSection);
     }
   </script>
 
