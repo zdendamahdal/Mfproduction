@@ -347,11 +347,9 @@ button:focus-visible {
   justify-content: center;
   width: 42px;
   height: 42px;
-  margin: 26px auto;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   border-radius: 50%;
   color: var(--white);
-  animation: scroll-down-bounce 2s ease-in-out infinite;
   transition: border-color 0.25s ease, color 0.25s ease;
 }
 
@@ -365,12 +363,36 @@ button:focus-visible {
   height: 18px;
 }
 
+.scroll-down--services {
+  margin: 26px auto;
+  animation: scroll-down-bounce 2s ease-in-out infinite;
+}
+
+.scroll-down--hero {
+  display: none;
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  z-index: 1;
+  transform: translateX(-50%);
+  animation: scroll-down-bounce-hero 2s ease-in-out infinite;
+}
+
 @keyframes scroll-down-bounce {
   0%, 100% {
     transform: translateY(0);
   }
   50% {
     transform: translateY(8px);
+  }
+}
+
+@keyframes scroll-down-bounce-hero {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  50% {
+    transform: translate(-50%, 8px);
   }
 }
 
@@ -1147,6 +1169,14 @@ button:focus-visible {
 @media (max-width: 700px) {
   .container {
     padding: 0 22px;
+  }
+
+  .scroll-down--services {
+    display: none;
+  }
+
+  .scroll-down--hero {
+    display: flex;
   }
 
   .services-grid {
