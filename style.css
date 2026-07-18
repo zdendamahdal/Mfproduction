@@ -441,7 +441,7 @@ button:focus-visible {
   overflow: hidden;
   transform-origin: center;
   cursor: pointer;
-  transition: transform 1s ease-in-out, filter 1s ease-in-out;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
 }
 
 .services-grid:hover .service-card {
@@ -479,7 +479,7 @@ button:focus-visible {
   font-weight: 600;
   color: var(--blue-light);
   opacity: 0;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   pointer-events: none;
 }
 
@@ -650,7 +650,7 @@ button:focus-visible {
   align-items: center;
   gap: 20px;
   width: max-content;
-  animation: clients-scroll 22s linear infinite;
+  animation: clients-scroll 100s linear infinite;
 }
 
 .clients-scroll:hover .clients-track {
@@ -662,7 +662,7 @@ button:focus-visible {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-4 * (137px + 20px)));
+    transform: translateX(calc(-18 * (137px + 20px)));
   }
 }
 
@@ -692,31 +692,16 @@ button:focus-visible {
 }
 
 .why-us-grid {
-  display: grid;
-  grid-template-columns: 0.85fr 1.3fr 0.95fr;
-  gap: 46px;
-  align-items: stretch;
-}
-
-.why-image {
-  display: block;
-  align-self: start;
-  aspect-ratio: 4 / 3;
-  border-radius: 6px;
-  overflow: hidden;
-  text-decoration: none;
-}
-
-.why-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  display: flex;
+  justify-content: center;
 }
 
 .why-content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 .why-content h2 {
@@ -746,43 +731,6 @@ button:focus-visible {
   width: 21px;
   height: 21px;
   color: var(--blue-light);
-}
-
-.why-quote {
-  padding: 34px 28px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.quote-mark {
-  width: 34px;
-  height: auto;
-  color: var(--blue);
-  margin-bottom: 14px;
-}
-
-.why-quote p {
-  color: #dbe0ea;
-  font-size: 15px;
-  line-height: 1.8;
-  margin-bottom: 22px;
-}
-
-.quote-author {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  font-size: 13px;
-}
-
-.quote-author strong {
-  color: var(--white);
-  font-weight: 600;
-}
-
-.quote-author span {
-  color: var(--text-gray-dim);
 }
 
 /* ========================================
@@ -1197,15 +1145,6 @@ button:focus-visible {
 
   .portfolio-grid {
     grid-template-columns: 1fr;
-  }
-
-  .why-us-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .why-image,
-  .why-quote {
-    display: none;
   }
 
   .footer-inner {
