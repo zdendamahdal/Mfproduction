@@ -306,9 +306,9 @@ button:focus-visible {
 /* ========================================
    HERO
    ======================================== */
-.hero {
+.hero { 
   position: relative;
-  min-height: 62vh;
+  min-height: 50vh;
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
@@ -342,16 +342,12 @@ button:focus-visible {
 }
 
 .scroll-down {
-  position: absolute;
-  left: 50%;
-  bottom: 32px;
-  z-index: 1;
-  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 42px;
   height: 42px;
+  margin: 26px auto;
   border: 1.5px solid rgba(255, 255, 255, 0.35);
   border-radius: 50%;
   color: var(--white);
@@ -371,10 +367,10 @@ button:focus-visible {
 
 @keyframes scroll-down-bounce {
   0%, 100% {
-    transform: translate(-50%, 0);
+    transform: translateY(0);
   }
   50% {
-    transform: translate(-50%, 8px);
+    transform: translateY(8px);
   }
 }
 
@@ -400,6 +396,7 @@ button:focus-visible {
    SLUŽBY
    ======================================== */
 .services {
+  scroll-margin-top: var(--header-height);
   padding: 90px 0;
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-subtle);
@@ -412,21 +409,28 @@ button:focus-visible {
   gap: 50px 40px;
 }
 
-.service-icon {
-  width: 56px;
-  height: 56px;
-  border: 1.5px solid var(--blue);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--blue-light);
-  margin-bottom: 26px;
+.service-card {
+  position: relative;
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 34px 28px 40px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  transform-origin: center;
+  cursor: pointer;
+  transition: transform 1s ease-in-out, filter 1s ease-in-out;
 }
 
-.service-icon svg {
-  width: 26px;
-  height: 26px;
+.services-grid:hover .service-card {
+  transform: scale(0.94);
+  filter: brightness(0.65);
+}
+
+.services-grid:hover .service-card:hover {
+  transform: scale(1.2);
+  filter: brightness(1);
+  z-index: 2;
 }
 
 .service-card h3 {
@@ -443,6 +447,22 @@ button:focus-visible {
   line-height: 1.75;
   color: var(--text-gray);
   margin-bottom: 22px;
+}
+
+.service-card-hint {
+  position: absolute;
+  right: 16px;
+  bottom: 12px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--blue-light);
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.service-card:hover .service-card-hint {
+  opacity: 1;
 }
 
 .services-more {
