@@ -335,7 +335,7 @@ main section[id] {
 }
 
 .scroll-down--services {
-  margin: 26px auto;
+  margin: 12px auto 26px;
   animation: scroll-down-bounce 2s ease-in-out infinite;
 }
 
@@ -389,7 +389,7 @@ main section[id] {
 
 /*SLUŽBY*/
 .services {
-  padding: 90px 0;
+  padding: 69px 0;
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
@@ -487,7 +487,6 @@ main section[id] {
 
 /*PRO KOHO JSME TOČILI loga */
 .clients {
-  /* --logo-count musí odpovídat počtu unikátních log v HTML (bez aria-hidden duplikátů) */
   --logo-count: 17;
   --logo-w: 137px;
   --logo-gap: 20px;

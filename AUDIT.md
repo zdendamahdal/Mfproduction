@@ -44,7 +44,7 @@ Datum: 18. 7. 2026 · Auditované soubory: `index.html`, `about.html`, `kontakt.
 
 ### D1. Chybějící `width`/`height` u všech obrázků → skákání layoutu (CLS)
 - **Kde:** všechny `<img>` v `index.html`, `about.html`, `kontakt.html`
-- **Oprava:** Doplnit intrinsic rozměry (`width`/`height` atributy); prohlížeč si rezervuje místo před načtením.
+- **Oprava:** Doplnit intrinsic rozměry (`width`/`height` atributy); prohlížeč si rezervuje místo před načtením.      ----------------------------------
 
 ### D2. Chybí `loading="lazy"` u obrázků pod ohybem
 - **Kde:** 36× logo v karuselu (`index.html:117-225`), `dron.jpg` (`index.html:289`)
@@ -137,8 +137,8 @@ Datum: 18. 7. 2026 · Auditované soubory: `index.html`, `about.html`, `kontakt.
 ### N3. Textové drobnosti
 - `index.html:294` — „Napište nám.  " (koncové mezery), `index.html:295` — „my vám pomůžeme." (malé písmeno na začátku věty)
 - `index.html:78` a další — „klikni pro zobrazit více.." (dvě tečky místo tří / výstižnější „zobrazit více"), navíc nekonzistentní tykání vs. vykání ve zbytku webu („Napište nám", „Kontaktujte nás")
-- `index.html:255` — „vše vymyslíme, natočíme a sestříháme" (malé písmeno, ostatní položky checklistu začínají velkým)
-- `kontakt.html:88` — „fax.: +420 572 581 715" — stejné číslo jako telefon; fax v roce 2026 zvážit úplně vypustit
+- `index.html:255` — „vše vymyslíme, natočíme a sestříháme" (malé píseno, ostatní položky checklistu začínají velkým)
+- `kontakt.html:88` — „fax.: +420 572 581 715" — stejné číslo jako telefon; fax v roce 2026 zvážit úplně vypustitm
 
 ### N4. Alt texty
 - `index.html:151` — `alt="Klient"` u loga s vlnovkou (doplnit skutečný název firmy)
