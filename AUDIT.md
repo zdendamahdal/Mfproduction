@@ -169,3 +169,19 @@ Datum: 18. 7. 2026 · Auditované soubory: `index.html`, `about.html`, `kontakt.
 | 🟢 Nice to have | 8 | Favicon, OG tagy, textové korektury |
 
 **Doporučené pořadí prací:** K1+K3+K4 (rychlé opravy, ~30 min) → K2 (rozhodnutí o struktuře, ovlivní D7+D8) → K5+K6 (UX a výkon) → D-blok → N-blok.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Zpravodajství, Dokumentární pořady, Video pohlednice měst a obcí, Propagační film........ - do Služeb
