@@ -14,7 +14,7 @@
   --blue: #2f80f0;
   --blue-light: #2f80f0;
   --white: #ffffff;
-  --text-gray: #a6b0c3;
+  --text-gray: #ffffff;
   --text-gray-dim: #6f7c93;
   --border-subtle: rgba(255, 255, 255, 0.08);
   --header-height: 88px;
@@ -164,6 +164,7 @@ main section[id] {
   transition: transform 0.5s ease;
 }
 
+
 .header-inner {
   width: 100%;
   display: grid;
@@ -292,9 +293,9 @@ main section[id] {
 }
 
 /*HERO*/
-.hero { 
+.hero {
   position: relative;
-  min-height: 42vh;
+  min-height: 40vh;
   display: flex;
   align-items: center;
   padding-top: var(--header-height);
@@ -352,26 +353,69 @@ main section[id] {
 
 /*SLUŽBY*/
 .services {
-  padding: 210px 0;
+  position: relative;
+  overflow: hidden;
+  padding: 56px 0;
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-subtle);
   border-bottom: 1px solid var(--border-subtle);
 }
 
+.services::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, .035) 1px, transparent 1px);
+  background-size: 22px 22px;
+  pointer-events: none;
+}
+
+.services .container { position: relative; }
+
+
+
 .services-list {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 280px;
-  row-gap: 22px;
-  margin-top: 20px;
+  margin-top: 150px;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 32px;
+  row-gap: 28px;
   text-align: center;
 }
+
+.service-item {
+  position: relative;
+  padding: 16px 50px;
+  transition: transform .3s ease;
+}
+
+.service-item:hover { transform: translateY(-6px); }
+
+.service-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1.5px dashed rgba(47, 128, 240, .5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  color: var(--blue);
+  transition: transform .5s ease, border-color .3s ease;
+}
+
+.service-item:hover .service-icon {
+  transform: rotate(90deg);
+  border-color: var(--blue);
+}
+
+.service-icon svg { width: 20px; height: 20px; }
 
 .service-item h3 {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   color: var(--white);
   margin-bottom: 10px;
 }
@@ -380,17 +424,34 @@ main section[id] {
   font-size: 14px;
   line-height: 1.7;
   color: var(--text-gray);
-  
 }
 
+.service-line {
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--blue);
+  margin: 16px auto 0;
+  transition: width .35s ease;
+}
+
+.service-item:hover .service-line { width: 100%; }
+
 .services-note {
+  position: relative;
   max-width: 640px;
-  margin: 165px auto 0;
+  margin: 200px auto 0;
   text-align: center;
   font-size: 15px;
   line-height: 1.8;
   color: var(--text-gray);
   opacity: 70%;
+}
+
+@media (max-width: 968px) {
+  .services-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 700px) {
@@ -405,7 +466,7 @@ main section[id] {
   --logo-count: 17;
   --logo-w: 137px;
   --logo-gap: 20px;
-  --scroll-duration: 100s;
+  --scroll-duration: 120s;
   padding: 80px 0;
   background: var(--bg-secondary);
   border-top: 1px solid var(--border-subtle);
@@ -414,14 +475,8 @@ main section[id] {
 
 .clients-scroll {
   overflow: hidden;
-  cursor: grab;
-  touch-action: pan-y;
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
   mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-}
-
-.clients-scroll.is-dragging {
-  cursor: grabbing;
 }
 
 .clients-track {
@@ -430,19 +485,6 @@ main section[id] {
   gap: var(--logo-gap);
   width: max-content;
   animation: clients-scroll var(--scroll-duration) linear infinite;
-}
-
-.clients-track.is-dragging {
-  animation-play-state: paused;
-}
-
-.clients-track img {
-  -webkit-user-drag: none;
-  user-select: none;
-}
-
-.clients-scroll:hover .clients-track {
-  animation-play-state: paused;
 }
 
 .clients.is-paused .clients-track {
@@ -668,6 +710,12 @@ main section[id] {
   max-width: 70ch;
   margin: 0 auto;
 }
+.orange-text{
+   max-width: 70ch;
+   margin: 0 auto;
+   color: var(--blue-light);
+  }
+
 
 .story-text h2 {
   font-size: clamp(22px, 2.4vw, 28px);

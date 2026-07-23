@@ -50,6 +50,7 @@
     </div>
   </header>
 
+
   <main>
 
     <!-- ========================================
@@ -63,7 +64,7 @@
       </div>
       <div class="container">
         <div class="hero-content">
-          <h1>YOUR IDEAS IN MOTION</h1>
+          <h1>Your ides in motion.</h1>
           <p class="hero-subtitle">Tvoříme přes 25 let</p>
         </div>
       </div>
@@ -73,31 +74,50 @@
          SLUŽBY
          ======================================== -->
     <section class="services" id="sluzby">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Naše služby</h2>
+  <div class="container">
+    <div class="section-heading">
+      <h2>Naše služby</h2>
+    </div>
+    <div class="services-dots">
+      <span></span><span></span><span class="is-active"></span><span></span><span></span>
+    </div>
+    <div class="services-list">
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 9h20M6 3v3M18 3v3"/></svg>
         </div>
-        <div class="services-list">
-          <div class="service-item">
-            <h3>Zpravodajství</h3>
-            <p>Rychlé, přesné a objektivní zpravodajství z aktuálních událostí.</p>
-          </div>
-          <div class="service-item">
-            <h3>Dokumentární pořady</h3>
-            <p>Tvoříme dokumentární pořady na míru.</p>
-          </div>
-          <div class="service-item">
-            <h3>Video pohlednice měst a obcí</h3>
-            <p>Vizuální prezentace, které představí krásy, historii i moderní život vaší obce či města.</p>
-          </div>
-          <div class="service-item">
-            <h3>Propagační film</h3>
-            <p>Profesionální videa na míru pro firmy, zájmové spolky i veřejné instituce.</p>
-          </div>
-        </div>
-        <p class="services-note">Ke každému projektu přistupujeme individuálně – od prvního nápadu a scénáře přes samotné natáčení až po finální postprodukci. Dbáme na to, abychom zachytili to podstatné, předali emoci a doručili výsledek v termínu, na kterém se dohodneme.</p>
+        <h3>Video pohlednice měst a obcí</h3>
+        <p>Vizuální prezentace, které představí krásy, historii i moderní život vaší obce či města.</p>
+        <span class="service-line"></span>
       </div>
-    </section>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 4h13l5 5v11H3z"/><path d="M16 4v5h5"/></svg>
+        </div>
+        <h3>Dokumentární pořady</h3>
+        <p>Tvoříme dokumentární pořady na míru.</p>
+        <span class="service-line"></span>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>
+        </div>
+        <h3>Zpravodajství</h3>
+        <p>Rychlé, přesné a objektivní zpravodajství z aktuálních událostí.</p>
+        <span class="service-line"></span>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l5-5 4 4 5-6 4 5"/></svg>
+        </div>
+        <h3>Propagační film</h3>
+        <p>Profesionální videa na míru pro firmy, zájmové spolky i veřejné instituce.</p>
+        <span class="service-line"></span>
+      </div>
+    </div>
+    <p class="services-note">Ke každému projektu přistupujeme individuálně – od prvního nápadu a scénáře přes samotné natáčení až po finální postprodukci. Dbáme na to, abychom zachytili to podstatné, předali emoci a doručili výsledek v termínu, na kterém se dohodneme.</p>
+  </div>
+</section>
 
     <!-- ========================================
          PRO KOHO JSME TOČILI
@@ -105,7 +125,7 @@
     <section class="clients" id="klienti">
       <div class="container">
         <div class="section-heading">
-          <h2>  koho jsme natáčely</h2>
+          <h2>  pro koho jsme natáčeli</h2>
         </div>
         <div class="clients-scroll">
           <div class="clients-track">
@@ -257,7 +277,7 @@
       <div class="container">
         <div class="story-text">
           <h2>O nás</h2>
-          <p>Od roku 2001 pomáhá MF-Production zachytit důležité okamžiky a proměnit je v profesionální obrazový příběh. Za každou zakázkou stojí osobní přístup, dlouholeté zkušenosti a důraz na kvalitu.</p>
+          <p>Od roku <span class="orange-text"> 2001 </span> pomáhá MF-Production zachytit důležité okamžiky a proměnit je v profesionální obrazový příběh. Za každou zakázkou stojí osobní přístup, dlouholeté zkušenosti a důraz na kvalitu.</p>
           <div class="story-more" id="storyMore">
             <p>MF-Production je značka, pod kterou je od roku 2001 vytvářen profesionální videoobsah pro televize, firmy, instituce, ale i soukromé klienty.</p>
             <p>Specializujeme se na výrobu televizních reportáží, dokumentů, firemních videí, reklamních spotů, záznamů kulturních i společenských akcí a leteckých záběrů pomocí dronu. Každý projekt připravujeme na míru – od prvního nápadu přes natáčení až po finální postprodukci.</p>
@@ -398,70 +418,6 @@
           clientsSection.classList.toggle('is-paused', !entry.isIntersecting);
         });
       }).observe(clientsSection);
-    }
-
-    var clientsScroll = document.querySelector('.clients-scroll');
-    var clientsTrack = document.querySelector('.clients-track');
-
-    if (clientsSection && clientsScroll && clientsTrack) {
-      var cs = getComputedStyle(clientsSection);
-      var logoCount = parseFloat(cs.getPropertyValue('--logo-count')) || 0;
-      var logoW = parseFloat(cs.getPropertyValue('--logo-w')) || 0;
-      var logoGap = parseFloat(cs.getPropertyValue('--logo-gap')) || 0;
-      var scrollDuration = parseFloat(cs.getPropertyValue('--scroll-duration')) || 100;
-      var distance = logoCount * (logoW + logoGap);
-
-      var dragging = false;
-      var startX = 0;
-      var startTranslate = 0;
-
-      function currentTranslateX() {
-        var t = getComputedStyle(clientsTrack).transform;
-        if (t === 'none') return 0;
-        var match = t.match(/matrix.*\((.+)\)/);
-        if (!match) return 0;
-        var parts = match[1].split(', ').map(Number);
-        return parts.length === 16 ? parts[12] : parts[4];
-      }
-
-      function wrapX(x) {
-        if (distance <= 0) return x;
-        var r = x % distance;
-        if (r > 0) r -= distance;
-        return r;
-      }
-
-      clientsScroll.addEventListener('pointerdown', function (e) {
-        dragging = true;
-        startX = e.clientX;
-        startTranslate = currentTranslateX();
-        clientsScroll.setPointerCapture(e.pointerId);
-        clientsScroll.classList.add('is-dragging');
-        clientsTrack.classList.add('is-dragging');
-        clientsTrack.style.transform = 'translateX(' + startTranslate + 'px)';
-      });
-
-      clientsScroll.addEventListener('pointermove', function (e) {
-        if (!dragging) return;
-        var newX = wrapX(startTranslate + (e.clientX - startX));
-        clientsTrack.style.transform = 'translateX(' + newX + 'px)';
-      });
-
-      function endDrag() {
-        if (!dragging) return;
-        dragging = false;
-        clientsScroll.classList.remove('is-dragging');
-        clientsTrack.classList.remove('is-dragging');
-
-        var finalX = currentTranslateX();
-        var elapsed = distance > 0 ? (-wrapX(finalX) / distance) * scrollDuration : 0;
-
-        clientsTrack.style.transform = '';
-        clientsTrack.style.animationDelay = '-' + elapsed + 's';
-      }
-
-      clientsScroll.addEventListener('pointerup', endDrag);
-      clientsScroll.addEventListener('pointercancel', endDrag);
     }
 
     window.addEventListener('scroll', () => {
