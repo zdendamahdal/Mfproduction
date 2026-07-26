@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:wght@300&display=swap">
 
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=4">
 
 
 </head>
@@ -58,13 +58,14 @@
          ======================================== -->
     <section class="hero">
       
+      
       <div class="hero-bg">
         <img src="camera (2).webp" alt="" width="1774" height="887" fetchpriority="high">
         <div class="hero-gradient"></div>
       </div>
       <div class="container">
         <div class="hero-content">
-          <h1>Your ides in motion.</h1>
+          <h1>Your ideas in motion.</h1>
           <p class="hero-subtitle">Tvoříme přes 25 let</p>
         </div>
       </div>
@@ -140,7 +141,7 @@
               <img src="loga/imgi_5_logo-2.webp" alt="Timken" loading="lazy" decoding="async" width="215" height="130">
             </div>
             <div class="client-logo">
-              <img src="loga/husqvarna-logo.jpeg" alt="Husqvarna" loading="lazy" decoding="async" width="1000" height="1000">
+              <img src="loga/husqvarna-logo.jpeg" alt="Husqvarna" loading="lazy" decoding="async" width="280" height="280">
             </div>
             <div class="client-logo">
               <img src="loga/Noe-logo-2016.webp" alt="TV Noe" loading="lazy" decoding="async" width="266" height="280">
@@ -271,6 +272,30 @@
     </section>
 
     <!-- ========================================
+         GALERIE / PRODUKCE
+         ======================================== -->
+    <section class="mfg" id="produkce">
+      <div class="section-heading">
+        <h2>Produkce</h2>
+      </div>
+
+      <div class="mfg-stage-wrap">
+        <div class="mfg-stage">
+          <div class="mfg-track" id="mfgTrack"></div>
+        </div>
+        <button type="button" class="mfg-arrow mfg-prev" id="mfgPrev" aria-label="Předchozí fotka">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+        <button type="button" class="mfg-arrow mfg-next" id="mfgNext" aria-label="Další fotka">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+
+      <div class="mfg-caption"><div class="anim" id="mfgCap"></div></div>
+      <div class="mfg-dots" id="mfgDots"></div>
+    </section>
+
+    <!-- ========================================
          O NÁS
          ======================================== -->
     <section class="story" id="o-nas">
@@ -368,37 +393,6 @@
       });
     });
 
-    var siteHeader = document.querySelector('.site-header');
-    if (siteHeader) {
-      var headerHeightPx = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--header-height'), 10) || 88;
-      var lastScrollY = window.pageYOffset;
-      var scrollTicking = false;
-
-      function updateHeaderVisibility() {
-        var currentScrollY = window.pageYOffset;
-
-        if (mainNav.classList.contains('is-open')) {
-          // nechat hlavičku viditelnou, dokud je otevřené mobilní menu
-        } else if (currentScrollY <= headerHeightPx) {
-          siteHeader.classList.remove('is-hidden');
-        } else if (currentScrollY > lastScrollY) {
-          siteHeader.classList.add('is-hidden');
-        } else if (currentScrollY < lastScrollY) {
-          siteHeader.classList.remove('is-hidden');
-        }
-
-        lastScrollY = currentScrollY;
-        scrollTicking = false;
-      }
-
-      window.addEventListener('scroll', function () {
-        if (!scrollTicking) {
-          requestAnimationFrame(updateHeaderVisibility);
-          scrollTicking = true;
-        }
-      }, { passive: true });
-    }
-
     var storyToggle = document.getElementById('storyToggle');
     var storyMore = document.getElementById('storyMore');
     var storyToggleLabel = storyToggle ? storyToggle.querySelector('.story-toggle-label') : null;
@@ -429,6 +423,24 @@
     text.style.opacity = Math.max(0, opacity);
   });
   </script>
+
+  <!-- ========================================
+       LIGHTBOX GALERIE
+       ======================================== -->
+  <div class="mfg-lb" id="mfgLb" role="dialog" aria-modal="true" aria-label="Zvětšená fotka" aria-hidden="true">
+    <button type="button" class="mfg-lb-close" id="mfgLbClose" aria-label="Zavřít">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <div class="mfg-lb-fig" id="mfgLbFig"></div>
+    <button type="button" class="mfg-lb-arrow mfg-lb-prev" id="mfgLbPrev" aria-label="Předchozí fotka">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <button type="button" class="mfg-lb-arrow mfg-lb-next" id="mfgLbNext" aria-label="Další fotka">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <script src="galerie-produkce.js" defer></script>
 
 </body>
 </html>
