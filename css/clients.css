@@ -1,0 +1,56 @@
+/*PRO KOHO JSME TOČILI loga */
+.clients {
+  --logo-count: 17;
+  --logo-w: 137px;
+  --logo-gap: 20px;
+  --scroll-duration: 120s;
+  padding: 80px 0;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-subtle);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.clients-scroll {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+
+.clients-track {
+  display: flex;
+  align-items: center;
+  gap: var(--logo-gap);
+  width: max-content;
+  animation: clients-scroll var(--scroll-duration) linear infinite;
+}
+
+.clients.is-paused .clients-track {
+  animation-play-state: paused;
+}
+
+@keyframes clients-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-1 * var(--logo-count) * (var(--logo-w) + var(--logo-gap))));
+  }
+}
+
+.client-logo {
+  flex: 0 0 auto;
+  width: var(--logo-w);
+  height: 91px;
+  border-radius: 6px;
+  background: #f4f6f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+
+.client-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
