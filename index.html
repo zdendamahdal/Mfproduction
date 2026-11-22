@@ -101,17 +101,11 @@
 <link rel="stylesheet" href="css/gallery.css">
 <link rel="stylesheet" href="css/cta.css">
 <link rel="stylesheet" href="css/story.css">
-<link rel="stylesheet" href="css/footer.css">>
+<link rel="stylesheet" href="css/footer.css">
 
-<noscript>
-  <style>
-    .mfg-card { opacity: 1 !important; filter: none !important; transform: none !important; }
-    .mfg-card-btn, .mfg-arrow, .mfg-dots { display: none !important; }
-  </style>
-</noscript>
-
-
+<noscript><link rel="stylesheet" href="css/noscript.css"></noscript>
 </head>
+
 <body>
 
   <!-- HLAVIČKA -->
@@ -269,59 +263,6 @@
             </div>
             <div class="client-logo">
               <img src="loga/imgi_14_logo-11.webp" alt="Zeveta Bojkovice" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-
-        
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/prestar-logo.jpeg" alt="" loading="lazy" decoding="async" width="200" height="200">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/signum-logo.jpeg" alt="" loading="lazy" decoding="async" width="200" height="200">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_5_logo-2.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/husqvarna-logo.jpeg" alt="" loading="lazy" decoding="async" width="280" height="280">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/Noe-logo-2016.webp" alt="" loading="lazy" decoding="async" width="266" height="280">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_6_logo-3.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_7_logo-4.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_8_logo-5.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_9_logo-6.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_10_logo-7.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_11_logo-8.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_16_logo-15.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_17_logo-17.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_18_logo-18.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_19_logo-19.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_21_logo-21.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
-            </div>
-            <div class="client-logo" aria-hidden="true">
-              <img src="loga/imgi_14_logo-11.webp" alt="" loading="lazy" decoding="async" width="215" height="130">
             </div>
           </div>
         </div>
@@ -537,54 +478,7 @@
     </div>
   </footer>
 
-  <script>
-    var navToggle = document.getElementById('navToggle');
-    var mainNav = document.getElementById('mainNav');
-
-    navToggle.addEventListener('click', function () {
-      var isOpen = mainNav.classList.toggle('is-open');
-      navToggle.classList.toggle('is-active');
-      navToggle.setAttribute('aria-expanded', isOpen);
-    });
-
-    document.querySelectorAll('.main-nav a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        mainNav.classList.remove('is-open');
-        navToggle.classList.remove('is-active');
-        navToggle.setAttribute('aria-expanded', 'false');
-      });
-    });
-
-    var storyToggle = document.getElementById('storyToggle');
-    var storyMore = document.getElementById('storyMore');
-    var storyToggleLabel = storyToggle ? storyToggle.querySelector('.story-toggle-label') : null;
-
-    if (storyToggle && storyMore && storyToggleLabel) {
-      storyToggle.addEventListener('click', function () {
-        var isExpanded = storyMore.classList.toggle('is-expanded');
-        storyToggle.setAttribute('aria-expanded', isExpanded);
-        storyToggleLabel.textContent = isExpanded ? 'Zobrazit méně' : 'Zobrazit více';
-      });
-    }
-
-    var clientsSection = document.querySelector('.clients');
-    if (clientsSection && 'IntersectionObserver' in window) {
-      new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          clientsSection.classList.toggle('is-paused', !entry.isIntersecting);
-        });
-      }).observe(clientsSection);
-    }
-
-    window.addEventListener('scroll', () => {
-    const text = document.querySelector('.hero-content');
-    const scrollY = window.scrollY;
-    const fadeDistance = 270; // za kolik px scrollu text úplně zmizí
-
-    const opacity = 1 - (scrollY / fadeDistance);
-    text.style.opacity = Math.max(0, opacity);
-  });
-  </script>
+  <script src="script/main.js" defer></script>
 
   <!-- LIGHTBOX GALERIE -->
   <div class="mfg-lb" id="mfgLb" role="dialog" aria-modal="true" aria-label="Zvětšená fotka" aria-hidden="true">
@@ -600,7 +494,7 @@
     </button>
   </div>
 
-  <script src="galerie-produkce.js" defer></script>
+  <script src="script/galerie-produkce.js" defer></script>
 
 </body>
 </html>

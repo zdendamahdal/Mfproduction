@@ -1,0 +1,10 @@
+.mfg-card {
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+.mfg-card-btn,
+.mfg-arrow,
+.mfg-dots {
+  display: none !important;
+}
